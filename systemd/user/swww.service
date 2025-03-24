@@ -1,0 +1,11 @@
+[Unit]
+Description=Run swww init until swww query succeeds
+After=graphical-session.target
+
+[Service]
+Type=simple
+ExecStart=/home/jaintp/.local/bin/walld
+Restart=on-failure
+
+[Install]
+WantedBy=default.target
